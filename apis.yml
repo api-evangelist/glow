@@ -1,8 +1,25 @@
 aid: glow
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/glow.png
 name: Glow
-description: Glow is a company surfaced as a portfolio company of a16z, norwest-venture-partners, union-square-ventures
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: 'Glow (glow.fm) was a podcast subscription and membership monetization
+  platform that let podcasters run paid, listener-supported premium feeds. The standalone
+  product has since been folded into Libsyn: as of this enrichment pass the glow.fm
+  domain issues a 301 redirect to Libsyn''s podcast-monetization offering, its TLS
+  certificate has expired, and no active developer portal, API, documentation, or
+  SDK surface remains under the Glow brand. It was surfaced in the API Evangelist
+  network as a venture-portfolio lead (a16z, Norwest Venture Partners, Union Square
+  Ventures) and has no live API to enrich.'
 url: https://raw.githubusercontent.com/api-evangelist/glow/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +29,19 @@ x-backed-by:
 - union-square-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: defunct
+x-status-evidence: 'glow.fm 301-redirects to https://libsyn.com/podcast-monetization/;
+  TLS certificate expired; no live API/developer surface (probed 2026-07-19)'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Podcasting
+- Media
+- Monetization
+- Subscriptions
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,5 +49,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/glow-domain-security.yml
 - type: Website
   url: https://glow.fm
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
